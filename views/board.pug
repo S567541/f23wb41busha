@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  .container-fluid
+    .row
+      - 
+        let results = [
+        { WhistleId: "WI09", Whistle_Price: 80, Whistle_Style: "red" },
+        { WhistleId: "WI88", Whistle_Price: 72, Whistle_Style: "white"},
+        { WhistleId: "WI13", Whistle_Price: 55, Whistle_Style: "red" }
+        ]
+  each value, index in results
+     
+      div WhistleId: #{value.WhistleId} Whistle_Price: #{value.Whistle_Price} Whistle_Style: #{value.Whistle_Style}
